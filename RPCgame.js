@@ -212,7 +212,7 @@ const uservideo=(vdo)=>{
     plbtn.innerHTML="<button id='pa'>Play Again</button>";
     plbtn.style.position="absolute";
     plbtn.style.top="38rem";
-    plbtn.style.left="39rem";
+    plbtn.style.left="44.5";
     document.querySelector("#pa").style.fontSize="30px";
     document.querySelector("#pa").style.borderRadius="5px";
     document.querySelector("#pa").style.padding="3px";
