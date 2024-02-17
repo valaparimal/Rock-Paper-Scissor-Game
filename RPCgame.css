@@ -1,63 +1,108 @@
 *{
-    padding: 0;
-    margin: 0;
-    
+    margin: 0%;
+    padding: 0%;
+    text-align:center;
 }
 header{
-    background-color: #f79b45;
-    padding: 0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
+    background-color: lightyellow;
 }
-.white{
-    background-color: rgb(211, 254, 253);
+.choices{
+    animation: fadeIn 1s;
+    padding:2rem;
+    justify-content:center;
+    gap:3rem;
+    /* animation-delay: 3s; */
 }
-.black{
-    background-color: black;
+@keyframes  fadeIn{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
 }
-a{
-    color: white;
-    text-decoration: none;
+#userchoices{
+    position:absolute;
+    top:2.3rem;
 }
-h2{
-    display: inline;
+#compchoices{
+    position:absolute;
+    top:2.3rem;
+    right:0%;
+}
+.choice,.compchoice{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:165px;
+    width:165px;
+    border-radius:50%;
+}
+.choice:hover{
+    opacity:0.5; 
+    cursor:cell;
+    background-color:black;
+}
+img{
+    height:150px;
+    width:150px;
+    object-fit:cover;
+    border-radius:50%;
+}
+#vs{
+    position:absolute;
+    top:20rem;
+    right:49.4%;
+}
+#score-board{
+    display: flex;
+    gap:5rem;
+    justify-content:center;
+    padding-bottom:2rem;
+    padding-top:25rem;
+}
+#userscore,#compscore{
+    display:inline;
+    font-size:30px;
+}
+#msgbg{
+    padding:10px;
+    background-color:black;
+    border-radius:10px;
+}
+#msg{   
+    color:white;
+    display:inline;
+    font-size:20px;
+}
+pre{
+    position:absolute;
+    top:40rem;
+    text-align: left;
 }
 
-#navbar{
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
+#playbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    top: 10rem;
+    left:35.5rem;
+    background-color: rgb(14, 245, 245);
+    border: solid red;
+    border-radius: 5px;
+    padding: 5px;
 }
-#map{
-    color: red;
-    margin: 0;
+#refresh{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin:2px;
 }
-.navbarBtn1{
-    width: 70px;
-    margin-top: 0.2%;
-    margin-bottom: 0.2%;
-    margin-left: 0.2%;
-    margin-right: 20%;
-    background-color: rgb(46, 45, 45);
-    border-color: white;
-    padding: 0.1%;
+#home{
+    font-size: 1.5rem;
+    padding: 2px;
+    border-radius: 10px; 
 }
-.navbarBtn2{
-    width: 70px;
-    margin-top: 0.2%;
-    margin-bottom: 0.2%;
-    margin-left: 0.2%;
-    margin-right: 20%;
-    background-color: rgb(71, 151, 194);
-    border-color: white;
-    padding: 0.1%;
-   
-}
-#ytlink{
-    color: red;
-}
-#pre{
-    font-size: xx-small;
-    position: fixed;
-    bottom: 30px;
-    left: 0%;
+
+button:hover{
+    cursor:pointer;
+    opacity: 50%;
 }
