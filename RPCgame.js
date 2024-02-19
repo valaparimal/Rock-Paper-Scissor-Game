@@ -1,4 +1,6 @@
 let usernm='';
+let compnm='comp';
+let comphover;
 let userScore=0,userop="Roak";
 let compScore=0,compop="Roak";
 let userScoremsg=document.querySelector("#userscore");
@@ -8,7 +10,19 @@ let msgbg=document.querySelector("#msgbg");
 let p=0,q=0;
 
 let btn=document.querySelector("#playbtn");
+let btn2=document.querySelector("#playbtn2");
+
 btn.addEventListener("click",()=>{
+    promptmsg();
+    msgbg.style.visibility="unset";
+    document.querySelector("#score-board").style.visibility="unset";
+    document.querySelector("#vs").style.visibility="unset";
+    document.querySelector(".note").style.visibility="hidden";
+    q++;
+    main();
+});
+
+const promptmsg=()=>{
     while(usernm==='')
     {
         usernm=prompt("Enter your Name to play :");
@@ -23,10 +37,8 @@ btn.addEventListener("click",()=>{
         username.innerText=usernm;
     });
     btn.remove();
-    q++;
-    main();
-});
-
+    btn2.remove();
+}
 
 const userImage=(user)=>{
     const image1=document.createElement("div");
@@ -108,6 +120,8 @@ const genchoice= ()=>{
     const arr=["Roak","Paper","Scissor"];
     return arr[Math.floor(Math.random()*3)];
 }
+
+
 const result=(user,comp)=>{
     let rt;
     if(user===comp)
@@ -223,6 +237,7 @@ const uservideo=(vdo)=>{
  const main=()=>{
     userScore=0;
     compScore=0;
+
    
     if(p!==0)
     {
@@ -263,7 +278,7 @@ const uservideo=(vdo)=>{
             compOpacity(compop);
             const user =choice.getAttribute("id");
             userImage(user);
-            const comp=genchoice();
+            let comp=genchoice();
             compImage(comp);
             userOpacity(user);
             compOpacity(comp);
@@ -276,3 +291,5 @@ const uservideo=(vdo)=>{
         refresh.addEventListener("click",()=>{
             location.replace(url="index.html");
         });
+
+       
