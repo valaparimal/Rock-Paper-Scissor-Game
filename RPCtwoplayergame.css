@@ -198,7 +198,7 @@ button:hover{
     align-items: center;
     font-size: 40px;
     position: absolute;
-    top: 20%;
+    top: 10rem;
     left:46%;
     background-color: rgb(14, 245, 245);
     border: solid red;
@@ -222,7 +222,7 @@ button:hover{
     background-color: yellow;
     position :absolute;
     top:5rem;
-    right:14rem;
+    right:17rem;
     visibility:hidden;
 }
 .star{
