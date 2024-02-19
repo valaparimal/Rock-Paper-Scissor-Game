@@ -49,6 +49,7 @@ img{
     position:absolute;
     top:20rem;
     right:49.4%;
+    visibility: hidden;
 }
 #score-board{
     display: flex;
@@ -56,6 +57,7 @@ img{
     justify-content:center;
     padding-bottom:2rem;
     padding-top:25rem;
+    visibility: hidden;
 }
 #userscore,#compscore{
     display:inline;
@@ -65,6 +67,7 @@ img{
     padding:10px;
     background-color:black;
     border-radius:10px;
+    visibility:hidden;
 }
 #msg{   
     color:white;
@@ -83,13 +86,14 @@ pre{
     align-items: center;
     font-size: 40px;
     position: absolute;
-    top: 10rem;
-    left:41%;
+    top: 30%;
+    left:37%;
     background-color: rgb(14, 245, 245);
     border: solid red;
     border-radius: 5px;
     padding: 5px;
 }
+
 #refresh{
     position: absolute;
     top: 2px;
@@ -105,4 +109,32 @@ pre{
 button:hover{
     cursor:pointer;
     opacity: 50%;
+}
+
+.comphover:hover{
+    opacity:0.5; 
+    cursor:cell;
+    background-color:black;
+}
+#playbtn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left:42%;
+    background-color: rgb(14, 245, 245);
+    border: solid red;
+    border-radius: 5px;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.note{
+    position: absolute;
+    top:90%;
+    left:35%;
 }
