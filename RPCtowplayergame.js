@@ -21,7 +21,7 @@ let btn2=document.querySelector("#playbtn2");
 
 
 btn2.addEventListener("click",()=>{
-    promptmsg();
+   // promptmsg();
     player_1.style.visibility="unset";
     player_2.style.visibility="unset";
     document.querySelector(".stop1").style.visibility="unset";
@@ -39,7 +39,7 @@ btn2.addEventListener("click",()=>{
 const promptmsg=( )=>{
     while(usernm==='')
     {
-        usernm=prompt("Enter Player 1 Name to play :");
+        usernm=prompt("Enter your Name to play :");
         if(usernm===null)
         {
             location.reload();
@@ -52,7 +52,7 @@ const promptmsg=( )=>{
     });
      while(compnm==='comp')
         {
-            compnm=prompt("Enter Player Name to play :");
+            compnm=prompt("Enter your Name to play :");
             if(compnm===null)
             {
                 location.reload();
@@ -311,8 +311,8 @@ const uservideo=(vdo)=>{
     let player_1=document.createElement("div");
     player_1.innerHTML="<button id='click1'>Click</button>";
     player_1.style.position="absolute";
-    player_1.style.left="12%";
-    player_1.style.top="33%";
+    player_1.style.left="13rem";
+    player_1.style.top="14rem";
     document.querySelector("body").append(player_1);
     document.querySelector("#click1").style.fontSize="1.5rem";
     document.querySelector("#click1").style.borderRadius="50%";
@@ -324,8 +324,8 @@ const uservideo=(vdo)=>{
     let player_2=document.createElement("div");
     player_2.innerHTML="<button id='click2'>Click</button>";
     player_2.style.position="absolute";
-    player_2.style.right="18%";
-    player_2.style.top="33%";
+    player_2.style.right="13rem";
+    player_2.style.top="14rem";
     document.querySelector("body").append(player_2);
     document.querySelector("#click2").style.fontSize="1.5rem";
     document.querySelector("#click2").style.borderRadius="50%";
@@ -404,4 +404,3 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
-
