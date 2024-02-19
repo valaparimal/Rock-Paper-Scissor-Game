@@ -103,13 +103,13 @@ img{
 }
 #user{
     position :absolute;
-    top:73%;
+    top:32rem;
     left:16%;
     visibility:hidden;
 }
 #comp{
     position :absolute;
-    top:73%;
+    top:32rem;
     right:16%;
     visibility:hidden;
 }
@@ -119,7 +119,7 @@ img{
 }
 #msgbg{
     position:absolute;
-    top:85%;
+    top:38rem;
     left: 13%;
     padding:10px;
     background-color:black;
@@ -136,7 +136,7 @@ img{
 }
 #msgbgcomp{
     position:absolute;
-    top:85%;
+    top:38rem;
     right: 14%;
     padding:10px;
     background-color:black;
