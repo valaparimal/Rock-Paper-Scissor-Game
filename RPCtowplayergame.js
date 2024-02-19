@@ -329,7 +329,7 @@ const uservideo=(vdo)=>{
     player_2.innerHTML="<button id='click2'>Click</button>";
     player_2.style.position="absolute";
     player_2.style.right="15.3rem";
-    player_2.style.top="14rem";
+    player_2.style.top="14.2rem";
     document.querySelector("body").append(player_2);
     document.querySelector("#click2").style.fontSize="1.5rem";
     document.querySelector("#click2").style.borderRadius="50%";
