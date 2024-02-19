@@ -212,7 +212,7 @@ button:hover{
     background-color: yellow;
     position :absolute;
     top:12%;
-    left:17%;
+    left:15%;
     visibility:hidden;
 }
 .stop2{
@@ -222,7 +222,7 @@ button:hover{
     background-color: yellow;
     position :absolute;
     top:12%;
-    right:16%;
+    right:17%;
     visibility:hidden;
 }
 .star{
