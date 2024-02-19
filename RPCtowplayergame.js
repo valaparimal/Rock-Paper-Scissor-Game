@@ -181,6 +181,8 @@ const finalResult=(rt)=>{
         }
 
         document.querySelector(".star").style.visibility="unset";
+        document.querySelector("#click1").style.visibility="hidden";
+        document.querySelector("#click2").style.visibility="hidden";
         document.querySelector("#cur").remove();
         uservideo(1);
 
@@ -269,6 +271,8 @@ const uservideo=(vdo)=>{
     if(p!==0)
     {
         document.querySelector(".star").style.visibility="hidden";
+        document.querySelector("#click1").style.visibility="unset";
+        document.querySelector("#click2").style.visibility="unset";
         document.querySelector("#pa").remove();
         video.remove();
 
@@ -324,7 +328,7 @@ const uservideo=(vdo)=>{
     let player_2=document.createElement("div");
     player_2.innerHTML="<button id='click2'>Click</button>";
     player_2.style.position="absolute";
-    player_2.style.right="15rem";
+    player_2.style.right="15.3rem";
     player_2.style.top="14rem";
     document.querySelector("body").append(player_2);
     document.querySelector("#click2").style.fontSize="1.5rem";
@@ -404,4 +408,3 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
-
