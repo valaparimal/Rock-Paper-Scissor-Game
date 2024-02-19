@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roak Paper Scissor Game</title>
+    <link rel="stylesheet" href="RPCtwoplayergame.css">
+</head>
+<body>
+    <header>
+        <h1>Roak Paper Scissor </h1>
+    </header>
+    <main>
+        <div id="btn">
+            <button id="playbtn2">Play</button>
+        </div>
+        <div id="vd">
+            <audio id="cur" src="Happy_Kids_Cartoon_Music_Background_Y2bs.Com.m4a" height="0px" muted autoplay></audio>
+        </div>
+        <div class="choices" id="userchoices">
+            <div class="choice" id="Roak">
+                <img src="roak.png" />
+            </div>
+            <div class="choice" id="Paper">
+                <img src="paper.png"/>
+            </div>
+            <div class="choice" id="Scissor">
+                <img src="scissior.png"/>
+            </div>
+            <p class="username">You</p>
+        </div>
+        <div class="choices" id="compchoices">
+            <div class="compchoice" id="Roakc">
+                <img src="roak.png"/>
+            </div>
+            <div class="compchoice" id="Paperc">
+                <img src="paper.png"/>
+            </div>
+            <div class="compchoice" id="Scissorc">
+                <img src="scissior.png"/>
+            </div>
+            <p class="compname">Comp</p>
+        </div>
+        <div id="score-board">
+            <div id="user">
+                <p id="userscore">0</p>
+                <p class="username">You</p>
+            </div>            
+            <div id="comp">
+                <p id="compscore">0</p>
+                <p class="compname">Comp</p>
+            </div> 
+        </div>
+        <spam id="msgbg">
+            <p id="msg">Play Game</p>
+        </spam>
+        <spam id="msgbgcomp">
+            <p id="msgcomp">Play Game</p>
+        </spam>
+        <div>
+            <p id="vs">V/S</p>
+        </div>
+        <div id="refresh">
+            <button id="home">Home</button>
+        </div>
+        <div id="plbtn"></div>
+        <div class="stop1"></div>
+        <div class="stop2"></div>
+        <div class="star">
+            <img id="str" src="3-stars.png" width="500px">
+            <div class="win">hi</div>
+        </div>
+        <div class="note">
+            <p> * note : Three (3) Time win to become final 'WINNER'.</p>
+        </div>
+    </main>
+    <footer>
+        <pre>Game</pre>
+    </footer>
+    <script src="RPCtowplayergame.js"></script>
+</body>
+</html>

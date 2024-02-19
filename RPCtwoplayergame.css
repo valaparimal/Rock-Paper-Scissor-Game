@@ -1,0 +1,251 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-align:center;
+}
+header{
+    background-color: lightyellow;
+}
+.choices{
+    animation: fadeIn 1s;
+    padding:2rem;
+    justify-content:center;
+    gap:3rem;
+    /* animation-delay: 3s; */
+}
+@keyframes  fadeIn{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+#userchoices{
+    position:relative;
+    top:4rem;
+    left: 5%;
+    border-radius:50%;
+    box-shadow:0 0 20px rgb(13, 12, 12);
+    height:17rem;
+    width: 17rem;
+    overflow: hidden;
+}
+#userchoices .choice{
+    height: 18rem;
+    width: 55rem;
+    clip-path:polygon(100% 0%,50% 100%,0% 0%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#Roak,#Roakc{
+    top:-6rem;
+    right:-17rem;
+    transform: rotate(12deg);
+    background-color: rgb(244, 188, 189);
+}
+#Paper,#Paperc{
+    top:7rem;
+    right:-23rem;
+    transform: rotate(129deg);
+    background-color: rgb(241, 196, 245);
+}
+#Scissor,#Scissorc{
+    top:5rem;
+    right:-9.5rem;
+    background-color: rgb(178, 178, 236);
+    transform: rotate(243deg);
+}
+#compchoices{
+    position: absolute;
+    top:6.5rem;
+    left:70%;
+    border-radius:50%;
+    box-shadow:0 0 20px rgb(13, 12, 12);
+    height:17rem;
+    width: 17rem;
+    overflow: hidden;
+}
+ #compchoices .compchoice{
+    height: 18rem;
+    width: 55rem;
+    clip-path:polygon(100% 0%,50% 100%,0% 0%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height:70px;
+    width:70px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+ .choice,.compchoice{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:165px;
+    width:165px;
+    border-radius:50%;
+}
+
+#vs{
+    position:absolute;
+    top:18rem;
+    right:49.4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+#user{
+    position :absolute;
+    top:73%;
+    left:16%;
+    visibility:hidden;
+}
+#comp{
+    position :absolute;
+    top:73%;
+    right:16%;
+    visibility:hidden;
+}
+#userscore,#compscore{
+    display:inline;
+    font-size:30px;
+}
+#msgbg{
+    position:absolute;
+    top:85%;
+    left: 13%;
+    padding:10px;
+    background-color:black;
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+#msg{   
+    color:white;
+    display:inline;
+    font-size:20px;
+}
+#msgbgcomp{
+    position:absolute;
+    top:85%;
+    right: 14%;
+    padding:10px;
+    background-color:black;
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+#msgcomp{   
+    color:white;
+    display:inline;
+    font-size:20px;
+}
+pre{
+    position:absolute;
+    top:95%;
+    text-align: left;
+}
+
+#playbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    top: 12%;
+    left:37%;
+    background-color: rgb(14, 245, 245);
+    border: solid red;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#refresh{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin:2px;
+}
+#home{
+    font-size: 1.5rem;
+    padding: 2px;
+    border-radius: 10px; 
+}
+
+button:hover{
+    cursor:pointer;
+    opacity: 50%;
+}
+#click1:hover,#click2:hover{
+    cursor:pointer;
+    opacity: 100%;
+}
+
+#playbtn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    top: 20%;
+    left:46%;
+    background-color: rgb(14, 245, 245);
+    border: solid red;
+    border-radius: 5px;
+    padding: 5px;
+} 
+.stop1{
+    height: 3rem;
+    width:2rem;
+    clip-path:polygon(100% 0%,50% 100%,0% 0%);
+    background-color: yellow;
+    position :absolute;
+    top:12%;
+    left:17%;
+    visibility:hidden;
+}
+.stop2{
+    height: 3rem;
+    width:2rem;
+    clip-path:polygon(100% 0%,50% 100%,0% 0%);
+    background-color: yellow;
+    position :absolute;
+    top:12%;
+    right:16%;
+    visibility:hidden;
+}
+.star{
+    position: absolute;
+    width:800px;
+    height: 400px;
+    top: 10%;
+    left: 20%;
+    background-color:beige;
+    display: flex;
+    justify-content: center;
+    visibility:hidden;
+}
+#str{
+    border-radius:0%;
+    height:220px;
+    width:600px;
+    
+}
+.win{
+    background-color: green;
+    position:absolute;
+    font-size: 4rem;
+    top:65%;
+    color:white;
+}
