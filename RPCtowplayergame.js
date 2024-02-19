@@ -39,7 +39,7 @@ btn2.addEventListener("click",()=>{
 const promptmsg=( )=>{
     while(usernm==='')
     {
-        usernm=prompt("Enter your Name to play :");
+        usernm=prompt("Enter Player 1 Name to play :");
         if(usernm===null)
         {
             location.reload();
@@ -52,7 +52,7 @@ const promptmsg=( )=>{
     });
      while(compnm==='comp')
         {
-            compnm=prompt("Enter your Name to play :");
+            compnm=prompt("Enter Player Name to play :");
             if(compnm===null)
             {
                 location.reload();
