@@ -21,7 +21,7 @@ let btn2=document.querySelector("#playbtn2");
 
 
 btn2.addEventListener("click",()=>{
-   // promptmsg();
+    promptmsg();
     player_1.style.visibility="unset";
     player_2.style.visibility="unset";
     document.querySelector(".stop1").style.visibility="unset";
@@ -324,7 +324,7 @@ const uservideo=(vdo)=>{
     let player_2=document.createElement("div");
     player_2.innerHTML="<button id='click2'>Click</button>";
     player_2.style.position="absolute";
-    player_2.style.right="13rem";
+    player_2.style.right="16rem";
     player_2.style.top="14rem";
     document.querySelector("body").append(player_2);
     document.querySelector("#click2").style.fontSize="1.5rem";
@@ -404,3 +404,4 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
+
