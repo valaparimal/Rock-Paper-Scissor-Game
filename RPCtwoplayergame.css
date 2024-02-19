@@ -163,7 +163,7 @@ pre{
     align-items: center;
     font-size: 40px;
     position: absolute;
-    top: 12%;
+    top: 12rem;
     left:37%;
     background-color: rgb(14, 245, 245);
     border: solid red;
@@ -211,8 +211,8 @@ button:hover{
     clip-path:polygon(100% 0%,50% 100%,0% 0%);
     background-color: yellow;
     position :absolute;
-    top:12%;
-    left:15%;
+    top:5rem;
+    left:14rem;
     visibility:hidden;
 }
 .stop2{
@@ -221,15 +221,15 @@ button:hover{
     clip-path:polygon(100% 0%,50% 100%,0% 0%);
     background-color: yellow;
     position :absolute;
-    top:12%;
-    right:17%;
+    top:5rem;
+    right:14rem;
     visibility:hidden;
 }
 .star{
     position: absolute;
     width:800px;
     height: 400px;
-    top: 10%;
+    top: 4rem;
     left: 20%;
     background-color:beige;
     display: flex;
@@ -246,6 +246,6 @@ button:hover{
     background-color: green;
     position:absolute;
     font-size: 4rem;
-    top:65%;
+    top:16rem;
     color:white;
 }
