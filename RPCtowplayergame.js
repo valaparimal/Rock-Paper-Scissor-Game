@@ -21,7 +21,7 @@ let btn2=document.querySelector("#playbtn2");
 
 
 btn2.addEventListener("click",()=>{
-    promptmsg();
+    //promptmsg();
     player_1.style.visibility="unset";
     player_2.style.visibility="unset";
     document.querySelector(".stop1").style.visibility="unset";
@@ -180,6 +180,8 @@ const finalResult=(rt)=>{
            document.querySelector(".win").innerText=`${compnm} win!`;
         }
 
+        document.querySelector("body").style.backgroundColor="black";
+        document.querySelector("body").style.color="white";
         document.querySelector(".star").style.visibility="unset";
         document.querySelector("#click1").style.visibility="hidden";
         document.querySelector("#click2").style.visibility="hidden";
@@ -270,6 +272,8 @@ const uservideo=(vdo)=>{
    
     if(p!==0)
     {
+        document.querySelector("body").style.backgroundColor="white";
+        document.querySelector("body").style.color="black";
         document.querySelector(".star").style.visibility="hidden";
         document.querySelector("#click1").style.visibility="unset";
         document.querySelector("#click2").style.visibility="unset";
@@ -408,3 +412,4 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
+
