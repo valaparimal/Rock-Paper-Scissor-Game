@@ -392,7 +392,7 @@ const uservideo=(vdo)=>{
             }
             else if(value===1)
             {
-                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+260}deg)`;
+                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+230}deg)`;
             }
             else
             {
