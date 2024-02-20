@@ -58,7 +58,7 @@ header{
 #compchoices{
     position: absolute;
     top:6.5rem;
-    left:70%;
+    right: 7%;
     border-radius:50%;
     box-shadow:0 0 20px rgb(13, 12, 12);
     height:17rem;
@@ -153,7 +153,7 @@ img{
 }
 pre{
     position:absolute;
-    top:95%;
+    top:43rem;
     text-align: left;
 }
 
@@ -216,13 +216,13 @@ button:hover{
     visibility:hidden;
 }
 .stop2{
+    position :absolute;
     height: 3rem;
     width:2rem;
     clip-path:polygon(100% 0%,50% 100%,0% 0%);
     background-color: yellow;
-    position :absolute;
     top:5rem;
-    right:17rem;
+    right:16rem;
     visibility:hidden;
 }
 .star{
@@ -230,7 +230,7 @@ button:hover{
     width:800px;
     height: 400px;
     top: 4rem;
-    left: 20%;
+    left: 23rem;
     background-color:beige;
     display: flex;
     justify-content: center;
