@@ -353,7 +353,7 @@ const uservideo=(vdo)=>{
         {
             number%=3;
             let value=spinner();
-            userchoices_1.style.transition="1s";
+            userchoices_1.style.transition="1.5s";
             if(value===0)
             {
                 userchoices_1.style.transform=`rotate(${3600}deg)`;
@@ -385,14 +385,14 @@ const uservideo=(vdo)=>{
         {
             number%=3;
             let value=spinner();
-            document.querySelector("#compchoices").style.transition="1s";
+            document.querySelector("#compchoices").style.transition="1.5s";
             if(value===0)
             {
                 document.querySelector("#compchoices").style.transform=`rotate(${3600}deg)`;
             }
             else if(value===1)
             {
-                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+280}deg)`;
+                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+260}deg)`;
             }
             else
             {
