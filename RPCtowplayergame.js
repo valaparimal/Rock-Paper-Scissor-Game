@@ -21,7 +21,7 @@ let btn2=document.querySelector("#playbtn2");
 
 
 btn2.addEventListener("click",()=>{
-    //promptmsg();
+    promptmsg();
     player_1.style.visibility="unset";
     player_2.style.visibility="unset";
     document.querySelector(".stop1").style.visibility="unset";
