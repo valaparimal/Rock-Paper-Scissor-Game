@@ -227,25 +227,27 @@ button:hover{
 }
 .star{
     position: absolute;
-    width:800px;
+    width:60%;
     height: 400px;
     top: 4rem;
-    left: 23%;
+    left: 20%;
+    padding-top: 2rem;
     background-color:beige;
     display: flex;
     justify-content: center;
+    /* align-items: center; */
     visibility:hidden;
 }
 #str{
     border-radius:0%;
-    height:220px;
-    width:600px;
+    height:200px;
+    width:65%;
     
 }
 .win{
     background-color: green;
     position:absolute;
     font-size: 4rem;
-    top:16rem;
+    top:18rem;
     color:white;
 }
