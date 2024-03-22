@@ -16,7 +16,6 @@ let msgbgcomp=document.querySelector("#msgbgcomp");
 let p=0,q=0;
 
 
-
 let btn2=document.querySelector("#playbtn2");
 
 
@@ -32,7 +31,6 @@ btn2.addEventListener("click",()=>{
     document.querySelector("#comp").style.visibility="unset";
     document.querySelector("#vs").style.visibility="unset";
     document.querySelector(".note").style.visibility="hidden";
-
     main();
 });
 
@@ -76,15 +74,15 @@ const userImage=(user)=>{
     const image1=document.createElement("div");
     if(user==="Roak")
     {
-        image1.innerHTML="<img src='roak.png'/>";
+        image1.innerHTML="<img id='userimg' src='roak.png'/>";
     }
     else if(user==="Paper")
     {
-        image1.innerHTML="<img src='paper.png'/>";
+        image1.innerHTML="<img id='userimg' src='paper.png'/>";
     }
     else
     {
-        image1.innerHTML="<img src='scissior.png'/>";
+        image1.innerHTML="<img id='userimg' src='scissior.png'/>";
     }
         image1.style.height="250px";
         image1.style.width="250px";
@@ -100,15 +98,15 @@ const compImage=(comp)=>{
     const image2=document.createElement("div");
     if(comp==="Roak")
     {
-        image2.innerHTML="<img src='roak.png'/>";
+        image2.innerHTML="<img id='compimg' src='roak.png'/>";
     }
     else if(comp==="Paper")
     {
-        image2.innerHTML="<img src='paper.png'/>";
+        image2.innerHTML="<img id='compimg' src='paper.png'/>";
     }
     else
     {
-        image2.innerHTML="<img src='scissior.png'/>";
+        image2.innerHTML="<img id='compimg' src='scissior.png'/>";
     }
         image2.style.height="250px";
         image2.style.width="250px";
@@ -192,11 +190,21 @@ const finalResult=(rt)=>{
         // choicesHidden.forEach((choices)=>{
         //     choices.style.visibility="hidden";
         // });
-        playButton();
-        
+        playButton();        
         document.querySelector("#pa").addEventListener("click",()=>{
             main();
         });
+
+        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",300);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",600);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",1200);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",1500);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",1800);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",2100);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",2400);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",2700);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",3000);
+        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",3300);
     }
 }
 
@@ -255,7 +263,7 @@ const uservideo=(vdo)=>{
     let plbtn=document.querySelector("#plbtn");
     plbtn.innerHTML="<button id='pa'>Play Again</button>";
     plbtn.style.position="absolute";
-    plbtn.style.top="35rem";
+    plbtn.style.top="38rem";
     plbtn.style.left="45%";
     document.querySelector("#pa").style.fontSize="30px";
     document.querySelector("#pa").style.borderRadius="5px";
@@ -345,15 +353,21 @@ const uservideo=(vdo)=>{
 
    // player 1
 
-    let v=0;
+    let v=0,t=0;
     let userchoices_1= document.querySelector("#userchoices");
     const click1 = document.querySelector("#click1");
     click1.addEventListener("click",()=>{
         if(v===0)
         {
+            if(t!==0)
+            {
+                document.querySelector("#userimg").remove();
+                document.querySelector("#compimg").remove();
+            }
+            t++;
             number%=3;
             let value=spinner();
-            userchoices_1.style.transition="1.5s";
+            userchoices_1.style.transition="1s";
             if(value===0)
             {
                 userchoices_1.style.transform=`rotate(${3600}deg)`;
@@ -369,10 +383,10 @@ const uservideo=(vdo)=>{
             v=1;
             user=number%3;
             setTimeout(()=>userImage(arr[user]),1000);
-            setTimeout(()=>document.querySelector(".stop1").style.visibility="hidden",2000);
-            setTimeout(()=>document.querySelector(".stop2").style.visibility="unset",2000);
-            setTimeout(()=>document.querySelector("#click1").style.backgroundColor="lightyellow",2000);
-            setTimeout(()=>document.querySelector("#click2").style.backgroundColor="yellow",2000);
+            setTimeout(()=>document.querySelector(".stop1").style.visibility="hidden",1500);
+            setTimeout(()=>document.querySelector(".stop2").style.visibility="unset",1500);
+            setTimeout(()=>document.querySelector("#click1").style.backgroundColor="lightyellow",1500);
+            setTimeout(()=>document.querySelector("#click2").style.backgroundColor="yellow",1500);
         }
     
     });
@@ -385,14 +399,14 @@ const uservideo=(vdo)=>{
         {
             number%=3;
             let value=spinner();
-            document.querySelector("#compchoices").style.transition="1.5s";
+            document.querySelector("#compchoices").style.transition="1s";
             if(value===0)
             {
                 document.querySelector("#compchoices").style.transform=`rotate(${3600}deg)`;
             }
             else if(value===1)
             {
-                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+230}deg)`;
+                document.querySelector("#compchoices").style.transform=`rotate(${3600*number+260}deg)`;
             }
             else
             {
@@ -400,11 +414,11 @@ const uservideo=(vdo)=>{
             }
             setTimeout(()=>compImage(arr[number%3]),1000);
             v=0;
-            setTimeout(()=>document.querySelector(".stop2").style.visibility="hidden",2000);
-            setTimeout(()=>document.querySelector(".stop1").style.visibility="unset",2000);
-            setTimeout(()=>document.querySelector("#click2").style.backgroundColor="lightyellow",2000);
-            setTimeout(()=>document.querySelector("#click1").style.backgroundColor="yellow",2000);
-            setTimeout(()=>result(arr[user],arr[number%3]),1000);
+            setTimeout(()=>document.querySelector(".stop2").style.visibility="hidden",1500);
+            setTimeout(()=>document.querySelector(".stop1").style.visibility="unset",1500);
+            setTimeout(()=>document.querySelector("#click2").style.backgroundColor="lightyellow",1500);
+            setTimeout(()=>document.querySelector("#click1").style.backgroundColor="yellow",1500);
+            setTimeout(()=>result(arr[user],arr[number%3]),1500);
         }
     });
 number=0;
@@ -412,4 +426,3 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
-
