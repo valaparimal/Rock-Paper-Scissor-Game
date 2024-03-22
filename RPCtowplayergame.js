@@ -426,3 +426,4 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
+
