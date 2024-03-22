@@ -235,6 +235,7 @@ button:hover{
     background-color:beige;
     display: flex;
     justify-content: center;
+    
     /* align-items: center; */
     visibility:hidden;
 }
@@ -250,4 +251,5 @@ button:hover{
     font-size: 4rem;
     top:18rem;
     color:white;
+    border-radius: 5px;
 }
