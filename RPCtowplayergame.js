@@ -190,23 +190,30 @@ const finalResult=(rt)=>{
         // choicesHidden.forEach((choices)=>{
         //     choices.style.visibility="hidden";
         // });
-        playButton();        
+        playButton();  
+        
+        document.querySelector("#imgstr").style.transition="3s";
+        document.querySelector("#imgstr").style.transform=`rotate(${360000}deg)`;
+
+        let b=0;
+        setTimeout(()=>{
+            for(let a=0;a<20;a++)
+            {
+                b+=300;
+                setTimeout(()=>{document.querySelector(".win").style.fontSize="3rem";
+                document.querySelector("#str").style.visibility="hidden";},b);
+                
+                b+=300;
+                setTimeout(()=>{document.querySelector(".win").style.fontSize="4rem";
+                document.querySelector("#str").style.visibility="unset";},b);
+            }},2000);
+
         document.querySelector("#pa").addEventListener("click",()=>{
             main();
         });
-
-
-       
-        let b=0;
-        for(let a=0;a<20;a++)
-        {
-            b+=300;
-            setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",b);
-            b+=300;
-            setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",b);
-        }
     }
 }
+
 
 const result=(user,comp)=>{
     console.log(user);
@@ -426,4 +433,3 @@ number=0;
         number+=Math.floor(Math.random()*100000);
         return number%3;
     }
-
