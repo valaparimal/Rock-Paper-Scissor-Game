@@ -170,15 +170,13 @@ const result=(user,comp)=>{
                 vdo=1;
                 msg.innerText=`${usernm} win!`;
                 msg.style.fontSize="35px";
-                msgbg.style.backgroundColor="white";
-                document.querySelector("body").style.backgroundColor="green";
+                msgbg.style.backgroundColor="green";
             }
             else
             {
                 msg.innerText=`${usernm} lose!`;
                 msg.style.fontSize="35px";
-                msgbg.style.backgroundColor="white";
-                document.querySelector("body").style.backgroundColor="red";
+                msgbg.style.backgroundColor="red";
             }
             document.querySelector("#score-board").style.color="white";
             msg.style.color="black";
@@ -231,6 +229,7 @@ const uservideo=(vdo)=>{
     document.querySelector("#pa").style.fontSize="30px";
     document.querySelector("#pa").style.borderRadius="5px";
     document.querySelector("#pa").style.padding="3px";
+    document.querySelector("#pa").style.backgroundColor="yellow";
     document.querySelector("body").prepend(plbtn);
  }
 
