@@ -38,10 +38,10 @@ const promptmsg=( )=>{
     while(usernm==='')
     {
         usernm=prompt("Enter Player 1 Name to play :");
-        if(usernm===null)
-        {
-            location.reload();
-        }
+    }
+    if(usernm===null || usernm===" ")
+    {
+        usernm="Player1";
     }
     console.log(usernm);
     let usrnm=document.querySelectorAll(".username");
@@ -51,10 +51,10 @@ const promptmsg=( )=>{
      while(compnm==='comp')
         {
             compnm=prompt("Enter Player 2 Name to play :");
-            if(compnm===null)
-            {
-                location.reload();
-            }
+        }
+        if(compnm===null || compnm===" ")
+        {
+            compnm="Player2";
         }
         console.log(compnm);
         let cmpnm=document.querySelectorAll(".compname");
@@ -195,16 +195,16 @@ const finalResult=(rt)=>{
             main();
         });
 
-        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",300);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",600);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",1200);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",1500);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",1800);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",2100);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",2400);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",2700);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",3000);
-        setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",3300);
+
+       
+        let b=0;
+        for(let a=0;a<20;a++)
+        {
+            b+=300;
+            setTimeout(()=>document.querySelector(".win").style.fontSize="3rem",b);
+            b+=300;
+            setTimeout(()=>document.querySelector(".win").style.fontSize="4rem",b);
+        }
     }
 }
 
