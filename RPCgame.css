@@ -105,7 +105,9 @@ pre{
     padding: 2px;
     border-radius: 10px; 
 }
-
+#yes:hover{
+    opacity:0.5;
+}
 button:hover{
     cursor:pointer;
     opacity: 50%;
@@ -142,3 +144,22 @@ a{
 footer{
     background-color: rgb(219, 191, 150);
 }
+#yes,#no{
+    display:flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 3rem;
+    border-radius: 20%;
+    background-color: aqua;
+    font-size: 20px;
+    top: 5rem;
+}
+#yes{
+    left: 45%;
+}
+#no{
+    right:45%;
+}
+
