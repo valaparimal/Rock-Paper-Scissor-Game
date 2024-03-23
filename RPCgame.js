@@ -13,34 +13,59 @@ let btn=document.querySelector("#playbtn");
 let btn2=document.querySelector("#playbtn2");
 
 btn.addEventListener("click",()=>{
-    promptmsg();
+    permission();
+});
+
+const promptmsg=()=>{
+    console.log(usernm);
+    let usrnm=document.querySelectorAll(".username");
+    usrnm.forEach((username)=>{
+        username.innerText=usernm;
+    });
+    document.querySelector("#ask").remove();
+    document.querySelector("main").style.visibility="unset";
+    allow();
+}
+
+function permission(){
+    let permissionmsg=document.createElement("div");
+    permissionmsg.setAttribute("id","ask");
+    document.querySelector("main").style.visibility="hidden";
+    permissionmsg.innerHTML="<p style='font-size:30px; background-color:rgb(14, 245, 245);'>Are you want to paly with your name?</p><button id='yes'>Yes</button><button id='no'>No</button>";
+    document.querySelector("header").after(permissionmsg);
+    btn.remove();
+    btn2.remove();
+
+    document.querySelector("#yes").addEventListener("click",()=>{
+        while(usernm==="")
+        {
+            usernm=prompt("Enter your name");
+            if(usernm===null)
+            {
+                window.location.reload();
+            }
+        }
+        if(usernm===" ")
+        {
+            usernm="You";
+        }
+        promptmsg();
+    });
+
+    document.querySelector("#no").addEventListener("click",()=>{
+        usernm="You";
+        promptmsg();
+    });
+}
+
+function allow(){
     msgbg.style.visibility="unset";
     document.querySelector("#score-board").style.visibility="unset";
     document.querySelector("#vs").style.visibility="unset";
     document.querySelector(".note").style.visibility="hidden";
     q++;
     main();
-});
-
-const promptmsg=()=>{
-    while(usernm==='')
-    {
-        usernm=prompt("Enter your Name to play :");
-
-    }
-    if(usernm===null || usernm===" ")
-    {
-        usernm="YOU";
-    }
-    console.log(usernm);
-    let usrnm=document.querySelectorAll(".username");
-    usrnm.forEach((username)=>{
-        username.innerText=usernm;
-    });
-    btn.remove();
-    btn2.remove();
 }
-
 const userImage=(user)=>{
     const image1=document.createElement("div");
     if(user==="Roak")
@@ -291,3 +316,5 @@ const uservideo=(vdo)=>{
         refresh.addEventListener("click",()=>{
             location.replace(url="index.html");
         });
+
+       
