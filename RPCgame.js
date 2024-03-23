@@ -26,10 +26,11 @@ const promptmsg=()=>{
     while(usernm==='')
     {
         usernm=prompt("Enter your Name to play :");
-        if(usernm===null)
-        {
-            location.reload();
-        }
+
+    }
+    if(usernm===null || usernm===" ")
+    {
+        usernm="YOU";
     }
     console.log(usernm);
     let usrnm=document.querySelectorAll(".username");
@@ -291,5 +292,3 @@ const uservideo=(vdo)=>{
         refresh.addEventListener("click",()=>{
             location.replace(url="index.html");
         });
-
-       
