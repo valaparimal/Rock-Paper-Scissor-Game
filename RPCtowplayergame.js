@@ -15,12 +15,76 @@ let msgcomp=document.querySelector("#msgcomp");
 let msgbgcomp=document.querySelector("#msgbgcomp");
 let p=0,q=0;
 
-
 let btn2=document.querySelector("#playbtn2");
 
-
 btn2.addEventListener("click",()=>{
+    permission();   
+});
+
+function permission(){
+    let permissionmsg=document.createElement("div");
+    permissionmsg.setAttribute("id","ask");
+    document.querySelector("main").style.visibility="hidden";
+    permissionmsg.innerHTML="<p style='font-size:30px; background-color:rgb(14, 245, 245);'>Are you want to paly with your name?</p><button id='yes'>Yes</button><button id='no'>No</button>";
+    document.querySelector("header").after(permissionmsg);
+    btn2.remove();
     promptmsg();
+}
+
+const promptmsg=( )=>{
+
+    document.querySelector("#yes").addEventListener("click",()=>{
+        while(usernm==='')
+        {
+            usernm=prompt("Enter Player 1 Name to play :");
+        }
+        if(usernm===null || usernm===" ")
+        {
+            usernm="Player1";
+        }
+        
+         while(compnm==='comp')
+            {
+                compnm=prompt("Enter Player 2 Name to play :");
+            }
+            if(compnm===null || compnm===" ")
+            {
+                compnm="Player2";
+            }
+            
+            allow();
+    });
+
+    document.querySelector("#no").addEventListener("click",()=>{
+        usernm="Player1";
+        compnm="Player2";
+        allow();
+    });
+
+}
+
+function allow(){
+
+    console.log(usernm);
+    let usrnm=document.querySelectorAll(".username");
+    usrnm.forEach((username)=>{
+        username.innerText=usernm;
+    });
+
+    console.log(compnm);
+    let cmpnm=document.querySelectorAll(".compname");
+    cmpnm.forEach((compname)=>{
+        compname.innerText=compnm;
+    });
+    compop="Roakc";
+    document.querySelector("#userchoices").style.backgroundColor="Yellow";
+    document.querySelectorAll(".compchoice").forEach((compchoice)=>{
+        compchoice.classList.add("comphover");
+    });
+
+    document.querySelector("main").style.visibility="unset";
+    document.querySelector("#ask").remove();
+
     player_1.style.visibility="unset";
     player_2.style.visibility="unset";
     document.querySelector(".stop1").style.visibility="unset";
@@ -32,43 +96,8 @@ btn2.addEventListener("click",()=>{
     document.querySelector("#vs").style.visibility="unset";
     document.querySelector(".note").style.visibility="hidden";
     main();
-});
-
-const promptmsg=( )=>{
-    while(usernm==='')
-    {
-        usernm=prompt("Enter Player 1 Name to play :");
-    }
-    if(usernm===null || usernm===" ")
-    {
-        usernm="Player1";
-    }
-    console.log(usernm);
-    let usrnm=document.querySelectorAll(".username");
-    usrnm.forEach((username)=>{
-        username.innerText=usernm;
-    });
-     while(compnm==='comp')
-        {
-            compnm=prompt("Enter Player 2 Name to play :");
-        }
-        if(compnm===null || compnm===" ")
-        {
-            compnm="Player2";
-        }
-        console.log(compnm);
-        let cmpnm=document.querySelectorAll(".compname");
-        cmpnm.forEach((compname)=>{
-            compname.innerText=compnm;
-        });
-        compop="Roakc";
-        document.querySelector("#userchoices").style.backgroundColor="Yellow";
-        document.querySelectorAll(".compchoice").forEach((compchoice)=>{
-            compchoice.classList.add("comphover");
-        });
-
-    btn2.remove();
 }
+
 
 const userImage=(user)=>{
     const image1=document.createElement("div");
@@ -124,6 +153,7 @@ const genchoice= ()=>{
     return arr[Math.floor(Math.random()*3)];
 }
 
+let a=0;
 
 const finalResult=(rt)=>{
     if(rt==="win")
@@ -190,14 +220,22 @@ const finalResult=(rt)=>{
         // choicesHidden.forEach((choices)=>{
         //     choices.style.visibility="hidden";
         // });
-        playButton();  
         
-        document.querySelector("#imgstr").style.transition="3s";
-        document.querySelector("#imgstr").style.transform=`rotate(${360000}deg)`;
+        setTimeout(()=>{
+            playButton();
+            document.querySelector("#pa").addEventListener("click",()=>{
+                document.querySelector("#str").style.visibility="hidden";
+                main();
+            });
+        },5000);
+        
+      
+        document.querySelector("#imgstr").style.transition="2s";
+        document.querySelector("#imgstr").style.transform=`rotate(${a+=360000}deg)`;
 
         let b=0;
         setTimeout(()=>{
-            for(let a=0;a<20;a++)
+            for(let a=0;a<3;a++)
             {
                 b+=300;
                 setTimeout(()=>{document.querySelector(".win").style.fontSize="3rem";
@@ -207,10 +245,6 @@ const finalResult=(rt)=>{
                 setTimeout(()=>{document.querySelector(".win").style.fontSize="4rem";
                 document.querySelector("#str").style.visibility="unset";},b);
             }},2000);
-
-        document.querySelector("#pa").addEventListener("click",()=>{
-            main();
-        });
     }
 }
 
