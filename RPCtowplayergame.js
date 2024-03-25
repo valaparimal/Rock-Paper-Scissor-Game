@@ -235,18 +235,27 @@ const finalResult=(rt)=>{
 
         let b=0;
         setTimeout(()=>{
-            for(let a=0;a<3;a++)
+            document.querySelector("#imgstr").style.transition="0.1s";
+
+            for(let a=0;a<5;a++)
             {
                 b+=300;
                 setTimeout(()=>{document.querySelector(".win").style.fontSize="3rem";
-                document.querySelector("#str").style.visibility="hidden";},b);
+                document.querySelector("#imgstr").style.transform=`rotate(${10}deg)`;
+                },b);
                 
                 b+=300;
                 setTimeout(()=>{document.querySelector(".win").style.fontSize="4rem";
-                document.querySelector("#str").style.visibility="unset";},b);
+                  document.querySelector("#imgstr").style.transform=`rotate(${-10}deg`;
+                  if(a==4)
+                  {
+                    document.querySelector("#imgstr").style.transform=`rotate(${0}deg`;
+                  }
+                },b);
             }},2000);
     }
 }
+
 
 
 const result=(user,comp)=>{
