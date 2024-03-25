@@ -25,6 +25,7 @@ function permission(){
     let permissionmsg=document.createElement("div");
     permissionmsg.setAttribute("id","ask");
     document.querySelector("main").style.visibility="hidden";
+    document.querySelector("body").style.backgroundColor="unset";
     permissionmsg.innerHTML="<p style='font-size:30px; background-color:rgb(14, 245, 245);'>Are you want to paly with your name?</p><button id='yes'>Yes</button><button id='no'>No</button>";
     document.querySelector("header").after(permissionmsg);
     btn2.remove();
@@ -95,6 +96,8 @@ function allow(){
     document.querySelector("#comp").style.visibility="unset";
     document.querySelector("#vs").style.visibility="unset";
     document.querySelector(".note").style.visibility="hidden";
+
+    document.querySelector("body").style.backgroundColor="white";
     main();
 }
 
