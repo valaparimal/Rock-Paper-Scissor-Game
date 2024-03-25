@@ -24,6 +24,7 @@ const promptmsg=()=>{
     });
     document.querySelector("#ask").remove();
     document.querySelector("main").style.visibility="unset";
+    document.querySelector("body").style.backgroundColor="white";
     allow();
 }
 
@@ -31,10 +32,12 @@ function permission(){
     let permissionmsg=document.createElement("div");
     permissionmsg.setAttribute("id","ask");
     document.querySelector("main").style.visibility="hidden";
+    document.querySelector("body").style.backgroundColor="unset";
     permissionmsg.innerHTML="<p style='font-size:30px; background-color:rgb(14, 245, 245);'>Are you want to paly with your name?</p><button id='yes'>Yes</button><button id='no'>No</button>";
     document.querySelector("header").after(permissionmsg);
     btn.remove();
     btn2.remove();
+    document.querySelector("footer").style.visibility="hidden";
 
     document.querySelector("#yes").addEventListener("click",()=>{
         while(usernm==="")
@@ -42,6 +45,7 @@ function permission(){
             usernm=prompt("Enter your name");
             if(usernm===null)
             {
+                document.querySelector("footer").style.visibility="unset";
                 window.location.reload();
             }
         }
@@ -64,6 +68,7 @@ function allow(){
     document.querySelector("#vs").style.visibility="unset";
     document.querySelector(".note").style.visibility="hidden";
     q++;
+    document.querySelector("footer").remove();
     main();
 }
 const userImage=(user)=>{
