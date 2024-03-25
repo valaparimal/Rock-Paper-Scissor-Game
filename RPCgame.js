@@ -316,5 +316,3 @@ const uservideo=(vdo)=>{
         refresh.addEventListener("click",()=>{
             location.replace(url="index.html");
         });
-
-       
