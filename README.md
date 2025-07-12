@@ -28,3 +28,10 @@ A fun **Rock-Paper-Scissor game** built using **HTML, CSS, and JavaScript**, des
 - **HTML** for structure
 - **CSS** for styling and animations
 - **JavaScript** for game logic and interactions
+
+---
+
+## 📸 Screenshot
+
+<img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/e7fcf060-a22e-4430-9a47-1bea09dbb7ea" />
+
