@@ -1,6 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    text-align: center;
 }
 header{
     background-color: lightyellow;
@@ -155,19 +156,24 @@ section{
     border-radius: 8px; 
     line-height: 1.6;
     box-shadow: 0px 2px 5px 1px;
+    text-align: left;
     /* font-size: 1.2rem; */
 }
 
 section h2{
     font-size: 25px;
+    text-align: left;
 }
 section h3{
     font-size: 21px;
+    text-align: left;
 }
 section p, section strong, section ul li, section ul li em{
     font-size: 18px;
     text-size-adjust: none;
+    text-align: left;
 }
+
 ul{
     margin-left: 40px;
     list-style-type: square;
