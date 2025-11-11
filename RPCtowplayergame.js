@@ -4,9 +4,9 @@ let compnm='comp';
 let turns=1;
 let cmphover;
 let number;
-let userScore=0,userop="Roak";
-let compScore=0,compop="Roak";
-let arr=['Roak','Paper','Scissor'];
+let userScore=0,userop="Rock";
+let compScore=0,compop="Rock";
+let arr=['Rock','Paper','Scissor'];
 let userScoremsg=document.querySelector("#userscore");
 let compScoremsg=document.querySelector("#compscore");
 let msg=document.querySelector("#msg");
@@ -77,7 +77,7 @@ function allow(){
     cmpnm.forEach((compname)=>{
         compname.innerText=compnm;
     });
-    compop="Roakc";
+    compop="Rockc";
     document.querySelector("#userchoices").style.backgroundColor="Yellow";
     document.querySelectorAll(".compchoice").forEach((compchoice)=>{
         compchoice.classList.add("comphover");
@@ -104,9 +104,9 @@ function allow(){
 
 const userImage=(user)=>{
     const image1=document.createElement("div");
-    if(user==="Roak")
+    if(user==="Rock")
     {
-        image1.innerHTML="<img id='userimg' src='roak.png'/>";
+        image1.innerHTML="<img id='userimg' src='rock.png'/>";
     }
     else if(user==="Paper")
     {
@@ -128,9 +128,9 @@ const userImage=(user)=>{
 
 const compImage=(comp)=>{
     const image2=document.createElement("div");
-    if(comp==="Roak")
+    if(comp==="Rock")
     {
-        image2.innerHTML="<img id='compimg' src='roak.png'/>";
+        image2.innerHTML="<img id='compimg' src='rock.png'/>";
     }
     else if(comp==="Paper")
     {
@@ -152,7 +152,7 @@ const compImage=(comp)=>{
 
 
 const genchoice= ()=>{
-    const arr=["Roak","Paper","Scissor"];
+    const arr=["Rock","Paper","Scissor"];
     return arr[Math.floor(Math.random()*3)];
 }
 
@@ -274,13 +274,13 @@ const result=(user,comp)=>{
     }
     else
     {
-        if(user==="Roak")
+        if(user==="Rock")
         {
             rt=comp==="Scissor"?"win":"lose";
         }
         else if(user==="Paper")
         {
-            rt=comp==="Roak"?"win":"lose";
+            rt=comp==="Rock"?"win":"lose";
         }
         else
         {
