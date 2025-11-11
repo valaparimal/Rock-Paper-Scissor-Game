@@ -16,6 +16,10 @@ btn.addEventListener("click",()=>{
     permission();
 });
 
+btn2.addEventListener("click",()=>{
+    window.location.href="RPCtwoplayergame.html";
+});
+
 const promptmsg=()=>{
     console.log(usernm);
     let usrnm=document.querySelectorAll(".username");
@@ -321,3 +325,4 @@ const uservideo=(vdo)=>{
         refresh.addEventListener("click",()=>{
             location.replace(url="index.html");
         });
+
